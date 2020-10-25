@@ -1,0 +1,21 @@
+<{$editcp}>
+<form name="form1" method="post" action="editcp.php?op=order&c=<{$catID}>&sc=<{$supID}>">
+  <table width="100%" class="outer">
+    <tr> 
+      <th align="left"> <{$name}> </th>
+      <th align="center"> <{$order}> </th>
+      <th align="right"> <{$action}> </th>
+    </tr>
+    <{foreach item=faqitem from=$faq}> 
+	<tr class="<{$faqitem.class}>"> 
+      <td><{$faqitem.name}></td>
+      <td align="center"><input name="TopicOrder[]" type="text" value="<{$faqitem.order}>" size="5" maxlength="5"></td>
+      <td align="right"><{$faqitem.action}></td>
+    </tr>
+	<{/foreach}>
+	<tr class="foot">
+		
+      <td colspan="3"> <input type="submit" name="Submit" value="<{$ReOrder}>"></td>
+	</tr>
+  </table>
+</form>

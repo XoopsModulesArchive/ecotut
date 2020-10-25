@@ -1,0 +1,16 @@
+<div align="center"><img src="images/logo.gif" alt="WF-ECB ecoTut" border="0"></div>
+<div align="center"><{$lang_articleheading}></div>
+<img src="images/tut.gif"><{$lang_supcattext}><p></p>
+
+<!-- BEGIN DYNAMIC BLOCK -->
+<{foreach item=supcatpage from=$supcatpage}>
+	<div class="item">
+		<div class="itemHead"><span class="itemTitle"><a href="index.php?op=viewcat&sc=<{$supcatpage.id}>"><img src="images/question.gif" align="middle"><b><{$supcatpage.name}></b></a></span></div>
+		<div class="itemInfo"><{$lang_total}>: <{$supcatpage.total}></div>
+		<div class="itemBody">
+	    	<p class="itemText"><{$supcatpage.description}></p>
+		</div>
+	</div>
+	<p>&nbsp; </p>
+<{/foreach}> 
+<!-- END DYNAMIC BLOCK -->

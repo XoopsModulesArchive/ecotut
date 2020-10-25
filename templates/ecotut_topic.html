@@ -1,0 +1,21 @@
+<img src="images/tut.gif"><a href="index.php"><{$lang_supcattext}></a> &gt;&gt; 
+<a href="index.php?op=viewcat&sc=<{$supID}>"><{$supName}></a> 
+&gt;&gt;
+<{$category.name}>
+<p></p>
+
+<fieldset>
+	<legend class="blockTitle"><b><{$lang_tbofcontents}></b></legend>	
+	<h2 align="center"><{$category.name}></h2>
+	<div align="right">[<{$category.editor}>]</div><br>
+	<{$category.description}>	
+	<hr align="center" size="1">
+	<div class="itemBody">
+		<{foreach item=topics from=$topics}> 
+			<img src="images/question.gif">
+			<a href="index.php?op=view&t=<{$topics.id}>&c=<{$catID}>&sc=<{$supID}>"><b><{$topics.question}></b></a>			    		
+  			<blockquote> <{$topics.summary}></blockquote>
+		<{/foreach}>
+	</div>
+</fieldset>
+<{$editerCP}>

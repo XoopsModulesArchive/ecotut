@@ -1,0 +1,16 @@
+<img src="images/tut.gif"><a href="index.php"><{$lang_supcattext}></a> >> 
+<{$supName}>
+<p></p>
+<!-- BEGIN DYNAMIC BLOCK -->
+<{foreach item=catpage from=$catpage}>
+<div class="item">
+		<div class="itemHead"><span class="itemTitle"><a href="index.php?op=viewtp&sc=<{$supID}>&c=<{$catpage.id}>"><img src="images/question.gif" align="middle"><b><{$catpage.name}></b></a></span></div>
+		<div class="itemInfo"><{$lang_total}>: <{$catpage.total}></div>
+		<div class="itemBody">
+	    	<p class="itemText"><{$catpage.description}></p>
+		</div>
+	</div>
+	<p>&nbsp; </p>
+<{/foreach}> 
+<!-- END DYNAMIC BLOCK -->
+
